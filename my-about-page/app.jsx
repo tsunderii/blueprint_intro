@@ -132,9 +132,10 @@ function App() {
         </div>
 
         <section className="section" id="projects">
-          <p className="work-intro">
-            here's some of my highlighted work! it tends to fall somewhere between creativity, coding, &amp; community ↓
-          </p>
+          <header className="work-intro">
+            <p className="work-intro-title">here's some of my highlighted work!</p>
+            <p>it tends to fall somewhere between creativity, coding, &amp; community ↓</p>
+          </header>
           <h2>code</h2>
 
           <div className="project-grid">
