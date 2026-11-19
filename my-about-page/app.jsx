@@ -11,7 +11,7 @@ function App() {
     },
     {
       title: "big appletunities",
-      url: "https://drive.google.com/drive/folders/1ybhClEU6PntYoKn-KqBeUJSErCefB0WX?usp=drive_link",
+      url: "https://www.instagram.com/bigappletunities/reels/",
       description: "my first real excuse to learn video editing. i made 40+ short-form videos ranging from dancing apples to painfully relatable school reels.",
     },
   ];
