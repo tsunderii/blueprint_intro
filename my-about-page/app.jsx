@@ -1,6 +1,8 @@
+import { useEffect, useState } from "react";
 import "./app.css";
 import { IntroHero } from "./IntroHero.jsx";
 import { RecentlyPlayed } from "./RecentlyPlayed.jsx";
+import { supabase } from "./src/supabase.js";
 
 function App() {
   const creativity = [
@@ -31,7 +33,7 @@ function App() {
     },
   ];
 
-  const projects = [
+  const [projects, setProjects] = useState([
     {
       title: "Mediator",
       url: "https://github.com/tsunderii/mediator-jc",
@@ -53,7 +55,33 @@ function App() {
         "A machine learning capstone comparing a traditional classifier with a neural network to predict income brackets from U.S. Census data.",
       tags: ["Python", "scikit-learn", "Keras"],
     },
-  ];
+  ]);
+
+  useEffect(() => {
+    if (!supabase) return;
+
+    const controller = new AbortController();
+
+    async function loadProjects() {
+      const { data, error } = await supabase
+        .from("portfolio_projects")
+        .select("title, url, description, tags")
+        .order("sort_order")
+        .order("url")
+        .abortSignal(controller.signal);
+
+      if (controller.signal.aborted) return;
+      if (error) {
+        console.warn("Could not load portfolio projects from Supabase.", error.message);
+        return;
+      }
+
+      setProjects(data);
+    }
+
+    void loadProjects();
+    return () => controller.abort();
+  }, []);
 
   return (
     <div className="app">
@@ -100,7 +128,7 @@ function App() {
 
           <div className="project-grid">
             {projects.map((project) => (
-              <article className="project-card" key={project.title}>
+              <article className="project-card" key={project.url}>
                 <h3>
                   <a href={project.url}>
                     {project.title} <span className="project-link-arrow" aria-hidden="true">↗</span>
