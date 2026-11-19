@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "spotify:authorize": "node --env-file=.env.spotify.local scripts/authorize-spotify.mjs",
     "build": "vite build",
     "lint": "oxlint",
     "preview": "vite preview"

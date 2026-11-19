@@ -1,15 +1,34 @@
 import "./app.css";
 import { IntroHero } from "./IntroHero.jsx";
+import { RecentlyPlayed } from "./RecentlyPlayed.jsx";
 
 function App() {
-  const interests = [
-    "Artificial Intelligence",
-    "Machine Learning",
-    "UI/UX Design",
-    "Product Development",
-    "Concerts",
-    "Manga",
-    "Video Editing",
+  const creativity = [
+    {
+      title: "baskin day media team '25",
+      url: "https://drive.google.com/drive/folders/1UdIr8QdMYz7Fr93AX_N0_bXuKAr-nPYp?usp=drive_link",
+      description: "a small archive of things i've made for baskin day ’25–26, including the official icon, sticker designs, social posts, and recap videos.",
+    },
+    {
+      title: "big appletunities",
+      url: "https://www.instagram.com/bigappletunities/reels/",
+      description: "my first real excuse to learn video editing. i made 40+ short-form videos ranging from dancing apples to painfully relatable school reels.",
+    },
+  ];
+
+  const community = [
+    {
+      title: "tech4good · genai skillbuilding lead",
+      description: "i help run a 10-week generative ai program for cohorts of ~15 students, covering everything from prompting and rag to prototyping and evaluation. lately, i've also been helping rethink the curriculum to make it more project-based, collaborative, and actually fun to learn from.",
+    },
+    {
+      title: "chatgpt student lab",
+      description: "worked with students across the u.s. + canada to test ideas, experiment with new chatgpt experiences, and share what students actually want from ai tools. i also hosted a campus event at ucsc and brought student feedback back to the openai team.",
+    },
+    {
+      title: "capcut student ambassador",
+      description: "my excuse to talk to strangers on campus. helped with student outreach, tabling, and showing people different ways they could use the product.",
+    },
   ];
 
   const projects = [
@@ -27,12 +46,19 @@ function App() {
         "An NLP project exploring how AI can classify different types of online discussions.",
       tags: ["Python", "Machine Learning", "NLP"],
     },
+    {
+      title: "Census Income Classification",
+      url: "https://github.com/tsunderii/census-income-classification",
+      description:
+        "A machine learning capstone comparing a traditional classifier with a neural network to predict income brackets from U.S. Census data.",
+      tags: ["Python", "scikit-learn", "Keras"],
+    },
   ];
 
   return (
     <div className="app">
       <nav className="navbar">
-        <a href="#about" className="logo">blueprint dev intro!</a>
+        <a href="#about" className="logo">about me</a>
 
         <div className="nav-links">
           <a href="#about">about</a>
@@ -49,23 +75,23 @@ function App() {
             <h2>a little about me</h2>
 
             <p>
-              in my free time, i like playing badminton and going to concerts!
-              lately, i've been trying to learn how to video edit and cook.
-              one day, i want to open a matcha popup from my apartment!
+              a lot of my projects and endeavors begin with me trying something
+              I know almost nothing about and figuring it out as I go...
             </p>
-
+            <p>
+              i like to lifemaxx! when im not stuck at the library, i like going
+              to concerts, cooking, creating, playing badminton, &amp; talking to strangers
+            </p>
           </section>
 
-          <section className="section">
-            <h2>things i'm interested in</h2>
-
-            <div className="tags">
-              {interests.map((interest) => (
-                <span className="tag" key={interest}>
-                  {interest}
-                </span>
-              ))}
-            </div>
+          <section className="section" aria-labelledby="current-work-title">
+            <h2 id="current-work-title">currently i'm…</h2>
+            <ul className="current-work">
+              <li>building interactive web experiences to make research more accessible @ design4good</li>
+              <li>leading product design + prototyping for nonprofit projects @ ucsc tech4good</li>
+              <li>experimenting with ml pipelines, data analysis, risk assessment and model evaluation @ break through tech - accenture</li>
+            </ul>
+            <p className="current-work-more">&amp; more</p>
           </section>
         </div>
 
@@ -94,16 +120,49 @@ function App() {
           </div>
         </section>
 
+        <div className="profile-grid work-highlights">
+          <section className="section creativity" aria-labelledby="creativity-title">
+            <h2 id="creativity-title">creativity</h2>
+            <div className="portfolio-entries">
+              {creativity.map((entry) => (
+                <article key={entry.title}>
+                  <h3>
+                    <a href={entry.url}>
+                      {entry.title} <span className="project-link-arrow" aria-hidden="true">↗</span>
+                    </a>
+                  </h3>
+                  <p>{entry.description}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="section community" aria-labelledby="community-title">
+            <h2 id="community-title">community</h2>
+            <div className="portfolio-entries">
+              {community.map((entry) => (
+                <article key={entry.title}>
+                  <h3>{entry.title}</h3>
+                  <p>{entry.description}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+        </div>
+
+        <RecentlyPlayed />
+
         <section className="section contact" id="contact">
           <div>
             <h2>let's connect!</h2>
 
             <p>
-             please add me and give me clout esp on spotify
+              feel free to stalk me on github &amp; linkedin
             </p>
           </div>
 
           <div className="social-links">
+            <a href="https://github.com/tsunderii">github ↗</a>
             <a
               href="https://open.spotify.com/user/ldkqlurdeiqdkjoqa3y2ifeqt?si=f34ada56a1ec4fb5"
               target="_blank"
