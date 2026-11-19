@@ -1,4 +1,5 @@
 import "./app.css";
+import { IntroHero } from "./IntroHero.jsx";
 
 function App() {
   const interests = [
@@ -13,22 +14,18 @@ function App() {
 
   const projects = [
     {
-      title: "ZenFocus",
+      title: "Mediator",
+      url: "https://github.com/tsunderii/mediator-jc",
       description:
-        "An adaptive productivity tool that helps people work and take breaks more intentionally.",
-      tags: ["AI", "Product Design", "React"],
+        "An AI Slack teammate that surfaces disagreements and helps teams align on deadlines and responsibilities.",
+      tags: ["AI", "FastAPI", "Slack"],
     },
     {
       title: "TakeMeter",
+      url: "https://github.com/tsunderii/takemeter",
       description:
         "An NLP project exploring how AI can classify different types of online discussions.",
       tags: ["Python", "Machine Learning", "NLP"],
-    },
-    {
-      title: "My Next Project",
-      description:
-        "Something new I'm currently experimenting with. More updates coming soon!",
-      tags: ["Coming Soon"],
     },
   ];
 
@@ -45,24 +42,9 @@ function App() {
       </nav>
 
       <main>
-        <section className="hero" id="about">
-          <div className="hero-copy">
-            <h1>
-              hi, i'm <strong>jasmin!</strong> <span className="tea-mark" aria-hidden="true" />
-            </h1>
+        <IntroHero />
 
-            <p className="hero-description">
-              i'm a second year computer science + statistics student at
-              uc santa cruz on the dev team at blueprint!
-            </p>
-
-            <a href="#projects" className="primary-button">
-              explore my work ↗
-            </a>
-          </div>
-        </section>
-
-        <div className="profile-grid">
+        <div className="profile-grid grid grid-cols-1 min-[641px]:grid-cols-2">
           <section className="section">
             <h2>a little about me</h2>
 
@@ -93,7 +75,11 @@ function App() {
           <div className="project-grid">
             {projects.map((project) => (
               <article className="project-card" key={project.title}>
-                <h3>{project.title}</h3>
+                <h3>
+                  <a href={project.url}>
+                    {project.title} <span className="project-link-arrow" aria-hidden="true">↗</span>
+                  </a>
+                </h3>
                 <p>{project.description}</p>
 
                 <div className="tags">
