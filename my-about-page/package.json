@@ -6,11 +6,13 @@
   "scripts": {
     "dev": "vite",
     "spotify:authorize": "node --env-file=.env.spotify.local scripts/authorize-spotify.mjs",
+    "supabase:check": "node --env-file=.env.local scripts/check-supabase.mjs",
     "build": "vite build",
     "lint": "oxlint",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.119.1",
     "react": "^19.3.1",
     "react-dom": "^19.3.1"
   },
