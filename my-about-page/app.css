@@ -206,6 +206,10 @@ h1 strong {
   line-height: 1.6;
 }
 
+.section p + p {
+  margin-top: 1em;
+}
+
 #projects,
 #recently-played {
   margin-bottom: var(--section-spacing);

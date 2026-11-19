@@ -78,7 +78,10 @@ function App() {
               a lot of my projects and endeavors begin with me trying something
               I know almost nothing about and figuring it out as I go...
             </p>
-
+            <p>
+              i like to lifemaxx! when im not stuck at the library, i like going
+              to concerts, cooking, creating, playing badminton, &amp; talking to strangers
+            </p>
           </section>
 
           <section className="section" aria-label="Current work">
