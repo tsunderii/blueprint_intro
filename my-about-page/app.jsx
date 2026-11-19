@@ -151,7 +151,11 @@ function App() {
               <div className="portfolio-entries">
                 {entries.map((entry) => (
                   <article key={entry.title}>
-                    <h3><a href={entry.url}>{entry.title} ↗</a></h3>
+                    <h3>
+                      <a href={entry.url}>
+                        {entry.title} <span className="project-link-arrow" aria-hidden="true">↗</span>
+                      </a>
+                    </h3>
                     <p>{entry.description}</p>
                   </article>
                 ))}

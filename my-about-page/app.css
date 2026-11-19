@@ -224,8 +224,7 @@ h1 strong {
   border-bottom: 1px solid var(--line);
 }
 
-.project-card h3,
-.portfolio-entries h3 {
+.project-card h3 {
   margin: 0;
   font: 400 clamp(28px, 3.3vw, 42px) / 1 var(--serif);
 }
@@ -286,7 +285,8 @@ h1 strong {
 }
 
 .portfolio-entries h3 {
-  margin-bottom: 6px;
+  margin: 0 0 6px;
+  font: 400 clamp(1.5rem, 2.8vw, 2rem) / 1.1 var(--serif);
 }
 
 .community {
