@@ -116,8 +116,6 @@ function App() {
           </div>
         </section>
 
-        <RecentlyPlayed />
-
         <div className="profile-grid work-highlights">
           <section className="section creativity" aria-labelledby="creativity-title">
             <h2 id="creativity-title">creativity</h2>
@@ -147,6 +145,8 @@ function App() {
             </div>
           </section>
         </div>
+
+        <RecentlyPlayed />
 
         <section className="section contact" id="contact">
           <div>
