@@ -8,8 +8,7 @@ export function IntroHero() {
         </h1>
         <p className="hero-description">
           i'm a sophomore computer science + statistics student at uc santa cruz,
-          based in the bay area. i like making things somewhere between ai,
-          people, design, and the internet.
+          based in the bay area.
         </p>
         <a href="#projects" className="primary-button">
           explore my work ↗

@@ -81,14 +81,13 @@ function App() {
 
           </section>
 
-          <section className="section">
-            <h2>currently, i'm</h2>
-            <ul className="current-work">
-              <li>researching what a more adaptive + generative study tool could look like</li>
-              <li>working on applied machine learning and ai projects through break through tech</li>
-              <li>rebuilding a generative ai curriculum for future tech4good research cohorts</li>
-              <li>experimenting with agents, rag systems, product ideas, and whatever else gets stuck in my head</li>
+          <section className="section" aria-label="Current work">
+            <ul className="current-work" role="list">
+              <li><span aria-hidden="true">↗</span> building interactive web experiences to make research more accessible @ design4good</li>
+              <li><span aria-hidden="true">↗</span> leading product design + prototyping for nonprofit projects @ ucsc tech4good</li>
+              <li><span aria-hidden="true">↗</span> experimenting with ml pipelines, data analysis, risk assessment and model evaluation @ break through tech - accenture</li>
             </ul>
+            <p className="current-work-more">&amp; more</p>
           </section>
         </div>
 
