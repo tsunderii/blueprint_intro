@@ -162,7 +162,7 @@ h1 strong {
 }
 
 #projects {
-  padding-block: clamp(42px, 7vw, 90px);
+  padding-bottom: clamp(42px, 7vw, 90px);
 }
 
 .project-card {
@@ -205,7 +205,7 @@ h1 strong {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 28px clamp(28px, 6vw, 80px);
-  padding-bottom: clamp(40px, 7vw, 85px);
+  padding-block: clamp(40px, 7vw, 85px);
 }
 
 .profile-grid .section {

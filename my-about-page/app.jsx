@@ -62,27 +62,6 @@ function App() {
           </div>
         </section>
 
-        <section className="section" id="projects">
-          <h2>things i've worked on</h2>
-
-          <div className="project-grid">
-            {projects.map((project) => (
-              <article className="project-card" key={project.title}>
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
-
-                <div className="tags">
-                  {project.tags.map((tag) => (
-                    <span className="tag" key={tag}>
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </article>
-            ))}
-          </div>
-        </section>
-
         <div className="profile-grid">
           <section className="section">
             <h2>a little about me</h2>
@@ -107,6 +86,27 @@ function App() {
             </div>
           </section>
         </div>
+
+        <section className="section" id="projects">
+          <h2>things i've worked on</h2>
+
+          <div className="project-grid">
+            {projects.map((project) => (
+              <article className="project-card" key={project.title}>
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+
+                <div className="tags">
+                  {project.tags.map((tag) => (
+                    <span className="tag" key={tag}>
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
 
         <section className="section contact" id="contact">
           <div>
@@ -137,7 +137,7 @@ function App() {
       </main>
 
       <footer>
-        <p>made with curiosity ♡ © 2026</p>
+        <p>© 2026</p>
       </footer>
     </div>
   );
