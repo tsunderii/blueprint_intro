@@ -133,7 +133,7 @@ function App() {
 
         <section className="section" id="projects">
           <header className="work-intro">
-            <p className="work-intro-title">here's some of my highlighted work!</p>
+            <p className="work-intro-title"><mark>here's some of my highlighted work!</mark></p>
             <p>it tends to fall somewhere between creativity, coding, &amp; community ↓</p>
           </header>
           <h2>code</h2>
