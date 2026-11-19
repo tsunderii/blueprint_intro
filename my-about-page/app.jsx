@@ -4,6 +4,14 @@ import { IntroHero } from "./IntroHero.jsx";
 import { RecentlyPlayed } from "./RecentlyPlayed.jsx";
 import { supabase } from "./src/supabase.js";
 
+const zenFocusProject = {
+  title: "ZenFocus",
+  url: "https://zenfocusv4.netlify.app/",
+  description:
+    "a pomodoro timer for people who don't really like pomodoro timers. built through tech4good as an experiment in making productivity tools respond more flexibly to how people actually study.",
+  tags: ["Tech4Good", "Productivity"],
+};
+
 function App() {
   const creativity = [
     {
@@ -127,7 +135,7 @@ function App() {
           <h2>things i've worked on</h2>
 
           <div className="project-grid">
-            {projects.map((project) => (
+            {[...projects, zenFocusProject].map((project) => (
               <article className="project-card" key={project.url}>
                 <h3>
                   <a href={project.url}>
