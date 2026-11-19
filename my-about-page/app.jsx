@@ -84,11 +84,12 @@ function App() {
             </p>
           </section>
 
-          <section className="section" aria-label="Current work">
-            <ul className="current-work" role="list">
-              <li><span aria-hidden="true">↗</span> building interactive web experiences to make research more accessible @ design4good</li>
-              <li><span aria-hidden="true">↗</span> leading product design + prototyping for nonprofit projects @ ucsc tech4good</li>
-              <li><span aria-hidden="true">↗</span> experimenting with ml pipelines, data analysis, risk assessment and model evaluation @ break through tech - accenture</li>
+          <section className="section" aria-labelledby="current-work-title">
+            <h2 id="current-work-title">currently i'm…</h2>
+            <ul className="current-work">
+              <li>building interactive web experiences to make research more accessible @ design4good</li>
+              <li>leading product design + prototyping for nonprofit projects @ ucsc tech4good</li>
+              <li>experimenting with ml pipelines, data analysis, risk assessment and model evaluation @ break through tech - accenture</li>
             </ul>
             <p className="current-work-more">&amp; more</p>
           </section>

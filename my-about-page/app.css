@@ -265,19 +265,13 @@ h1 strong {
 
 .current-work {
   margin: 0;
-  padding: 0;
-  list-style: none;
+  padding-inline-start: 1.25em;
+  list-style: disc;
   color: var(--muted);
   line-height: 1.6;
 }
 
-.current-work li {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 0.5em;
-}
-
-.current-work li span {
+.current-work li::marker {
   color: var(--leaf);
 }
 
