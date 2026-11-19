@@ -58,7 +58,7 @@ function App() {
   return (
     <div className="app">
       <nav className="navbar">
-        <a href="#about" className="logo">blueprint dev intro!</a>
+        <a href="#about" className="logo">about me</a>
 
         <div className="nav-links">
           <a href="#about">about</a>
