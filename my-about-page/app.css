@@ -210,6 +210,10 @@ h1 strong {
   margin-top: 1em;
 }
 
+.section .work-intro {
+  margin-bottom: 24px;
+}
+
 #projects,
 #recently-played {
   margin-bottom: var(--section-spacing);

@@ -132,7 +132,10 @@ function App() {
         </div>
 
         <section className="section" id="projects">
-          <h2>things i've worked on</h2>
+          <p className="work-intro">
+            here's some of my highlighted work! it tends to fall somewhere between creativity, coding, &amp; community ↓
+          </p>
+          <h2>code</h2>
 
           <div className="project-grid">
             {[...projects, zenFocusProject].map((project) => (
