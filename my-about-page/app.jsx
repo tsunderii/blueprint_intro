@@ -178,7 +178,7 @@ function App() {
           </section>
         </div>
 
-        <RecentlyPlayed />
+        {import.meta.env.VITE_STATIC_HOST !== "true" && <RecentlyPlayed />}
 
         <section className="section contact" id="contact">
           <div>
