@@ -1,4 +1,3 @@
-
 import "./app.css";
 
 function App() {
@@ -36,7 +35,7 @@ function App() {
   return (
     <div className="app">
       <nav className="navbar">
-        <a href="#" className="logo">blueprint dev intro!</a>
+        <a href="#about" className="logo">blueprint dev intro!</a>
 
         <div className="nav-links">
           <a href="#about">about</a>
@@ -47,51 +46,53 @@ function App() {
 
       <main>
         <section className="hero" id="about">
-          <span className="eyebrow">WELCOME TO MY WEBSITE</span>
+          <div className="hero-copy">
+            <h1>
+              hi, i'm <strong>jasmin!</strong> <span className="tea-mark" aria-hidden="true" />
+            </h1>
 
-          <h1>
-            hi, i'm jasmin! <span>✿</span>
-          </h1>
+            <p className="hero-description">
+              i'm a second year computer science + statistics student at
+              uc santa cruz on the dev team at blueprint!
+            </p>
 
-          <p className="hero-description">
-            i'm a second year computer science + statistics student at
-            uc santa cruz on the dev team at blueprint!
-          </p>
-
-          <a href="#projects" className="primary-button">
-            explore my work ↗
-          </a>
-        </section>
-
-        <section className="section">
-          <h2>01 / a little about me</h2>
-
-          <p>
-            in my free time, i like playing badminton and going to concerts! 
-            lately, i've been trying to learn how to video edit and cook. 
-            one day, i want to open a matcha popup from my apartment!
-          </p>
-
-        </section>
-
-        <section className="section">
-          <h2>02 / things i'm interested in</h2>
-
-          <div className="tags">
-            {interests.map((interest) => (
-              <span className="tag" key={interest}>
-                {interest}
-              </span>
-            ))}
+            <a href="#projects" className="primary-button">
+              explore my work ↗
+            </a>
           </div>
         </section>
 
+        <div className="profile-grid">
+          <section className="section">
+            <h2>a little about me</h2>
+
+            <p>
+              in my free time, i like playing badminton and going to concerts!
+              lately, i've been trying to learn how to video edit and cook.
+              one day, i want to open a matcha popup from my apartment!
+            </p>
+
+          </section>
+
+          <section className="section">
+            <h2>things i'm interested in</h2>
+
+            <div className="tags">
+              {interests.map((interest) => (
+                <span className="tag" key={interest}>
+                  {interest}
+                </span>
+              ))}
+            </div>
+          </section>
+        </div>
+
         <section className="section" id="projects">
-          <h2>03 / things i've worked on</h2>
+          <h2>things i've worked on</h2>
 
           <div className="project-grid">
             {projects.map((project) => (
-              <div className="project-card" key={project.title}>
+              <article className="project-card" key={project.title}>
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
 
@@ -102,17 +103,19 @@ function App() {
                     </span>
                   ))}
                 </div>
-              </div>
+              </article>
             ))}
           </div>
         </section>
 
         <section className="section contact" id="contact">
-          <h2>04 / let's connect!</h2>
+          <div>
+            <h2>let's connect!</h2>
 
-          <p>
-           please add me and give me clout esp on spotify
-          </p>
+            <p>
+             please add me and give me clout esp on spotify
+            </p>
+          </div>
 
           <div className="social-links">
             <a
@@ -134,7 +137,7 @@ function App() {
       </main>
 
       <footer>
-        <p>made with curiosity ♡ © 2026</p>
+        <p>© 2026</p>
       </footer>
     </div>
   );
