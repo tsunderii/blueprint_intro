@@ -3,41 +3,16 @@ import { IntroHero } from "./IntroHero.jsx";
 import { RecentlyPlayed } from "./RecentlyPlayed.jsx";
 
 function App() {
-  const highlights = [
+  const creativity = [
     {
-      title: "creativity",
-      entries: [
-        {
-          title: "baskin day media team '25",
-          url: "https://drive.google.com/drive/folders/1UdIr8QdMYz7Fr93AX_N0_bXuKAr-nPYp?usp=drive_link",
-          description: "a small archive of things i've made for baskin day ’25–26, including the official icon, sticker designs, social posts, and recap videos.",
-        },
-        {
-          title: "big appletunities",
-          url: "https://drive.google.com/drive/folders/1ybhClEU6PntYoKn-KqBeUJSErCefB0WX?usp=drive_link",
-          description: "my first real excuse to learn video editing. i made 40+ short-form videos ranging from dancing apples to painfully relatable school reels.",
-        },
-      ],
+      title: "baskin day media team '25",
+      url: "https://drive.google.com/drive/folders/1UdIr8QdMYz7Fr93AX_N0_bXuKAr-nPYp?usp=drive_link",
+      description: "a small archive of things i've made for baskin day ’25–26, including the official icon, sticker designs, social posts, and recap videos.",
     },
     {
-      title: "coding",
-      entries: [
-        {
-          title: "matcha rag guide",
-          url: "https://github.com/tsunderii/matcha-ordering-rag-guide",
-          description: "because matcha menus are weirdly intimidating. i turned menus + other matcha resources into a small rag system where beginners can ask what they should actually order.",
-        },
-        {
-          title: "zenfocus",
-          url: "https://zenfocusv4.netlify.app/",
-          description: "a pomodoro timer for people who don't really like pomodoro timers. built through tech4good as an experiment in making productivity tools respond more flexibly to how people actually study.",
-        },
-        {
-          title: "indesign csv cleaner",
-          url: "https://tsunderii.github.io/address-csv-cleaner/",
-          description: "a tiny utility made to solve an annoyingly specific problem: cleaning customer address data before importing it into indesign. preview, clean, export, done. in one place.",
-        },
-      ],
+      title: "big appletunities",
+      url: "https://drive.google.com/drive/folders/1ybhClEU6PntYoKn-KqBeUJSErCefB0WX?usp=drive_link",
+      description: "my first real excuse to learn video editing. i made 40+ short-form videos ranging from dancing apples to painfully relatable school reels.",
     },
   ];
 
@@ -144,37 +119,35 @@ function App() {
 
         <RecentlyPlayed />
 
-        <div className="profile-grid work-highlights grid grid-cols-1 min-[641px]:grid-cols-2">
-          {highlights.map(({ title, entries }) => (
-            <section className="section" key={title}>
-              <h2>{title}</h2>
-              <div className="portfolio-entries">
-                {entries.map((entry) => (
-                  <article key={entry.title}>
-                    <h3>
-                      <a href={entry.url}>
-                        {entry.title} <span className="project-link-arrow" aria-hidden="true">↗</span>
-                      </a>
-                    </h3>
-                    <p>{entry.description}</p>
-                  </article>
-                ))}
-              </div>
-            </section>
-          ))}
-        </div>
+        <div className="profile-grid work-highlights">
+          <section className="section creativity" aria-labelledby="creativity-title">
+            <h2 id="creativity-title">creativity</h2>
+            <div className="portfolio-entries">
+              {creativity.map((entry) => (
+                <article key={entry.title}>
+                  <h3>
+                    <a href={entry.url}>
+                      {entry.title} <span className="project-link-arrow" aria-hidden="true">↗</span>
+                    </a>
+                  </h3>
+                  <p>{entry.description}</p>
+                </article>
+              ))}
+            </div>
+          </section>
 
-        <section className="section community">
-          <h2>community</h2>
-          <div className="portfolio-entries">
-            {community.map((entry) => (
-              <article key={entry.title}>
-                <h3>{entry.title}</h3>
-                <p>{entry.description}</p>
-              </article>
-            ))}
-          </div>
-        </section>
+          <section className="section community" aria-labelledby="community-title">
+            <h2 id="community-title">community</h2>
+            <div className="portfolio-entries">
+              {community.map((entry) => (
+                <article key={entry.title}>
+                  <h3>{entry.title}</h3>
+                  <p>{entry.description}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+        </div>
 
         <section className="section contact" id="contact">
           <div>
