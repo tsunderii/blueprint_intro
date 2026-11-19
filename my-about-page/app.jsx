@@ -1,5 +1,6 @@
 import "./app.css";
 import { IntroHero } from "./IntroHero.jsx";
+import { RecentlyPlayed } from "./RecentlyPlayed.jsx";
 
 function App() {
   const interests = [
@@ -26,6 +27,13 @@ function App() {
       description:
         "An NLP project exploring how AI can classify different types of online discussions.",
       tags: ["Python", "Machine Learning", "NLP"],
+    },
+    {
+      title: "Census Income Classification",
+      url: "https://github.com/tsunderii/census-income-classification",
+      description:
+        "A machine learning capstone comparing a traditional classifier with a neural network to predict income brackets from U.S. Census data.",
+      tags: ["Python", "scikit-learn", "Keras"],
     },
   ];
 
@@ -93,6 +101,8 @@ function App() {
             ))}
           </div>
         </section>
+
+        <RecentlyPlayed />
 
         <section className="section contact" id="contact">
           <div>
